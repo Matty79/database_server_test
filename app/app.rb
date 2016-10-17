@@ -5,6 +5,10 @@ class ServerTest < Sinatra::Base
     'Hello ServerTest!'
   end
 
+  get '/set' do
+    "Hello World"
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
