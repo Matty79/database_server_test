@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'uri'
 
 class ServerTest < Sinatra::Base
   get '/' do
@@ -6,7 +7,7 @@ class ServerTest < Sinatra::Base
   end
 
   get '/set' do
-    "Hello World"
+    request.query_string
   end
 
   # start the server if ruby file executed directly
